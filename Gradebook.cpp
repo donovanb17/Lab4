@@ -5,7 +5,7 @@ using namespace std; // to avoid writing std before cin and cout
 // no nested functions in c++ (initial mistake)
 void getScores(int scores[], int size){
         
-            cout << "Please enter 5 test scores.";
+            cout << "Please enter 5 test scores." << endl;
             for (int i = 0; i < size; i++){
                 do {
                 cout << "Score " << i << ":";
@@ -30,14 +30,15 @@ void printScores(const int scores[], int size){
 }
 
 int getLowest(const int scores[], int size){
-    int lowest = scores[0]
+    int lowest = scores[0];
     for (int i = 0 + 1; i < size; i++){
         if (scores[i] < lowest){
-            lowest = scores[i]
+            lowest = scores[i];
         }
 
-    return lowest
+
     }
+return lowest;
 
 }
 
@@ -46,13 +47,11 @@ double calculateAverage(const int scores[], int size){
 
     for (int i = 0 + 1; i < size; i++){
         
-        int sumofscores = totalscore + scores[i];
-        int totalscore = sumofscores;
-    return sumofscores;
+        totalscore = totalscore + scores[i];
     }
-    int lowestofscores = getLowest(scores, NUMSCORES);
-    int lowest = sumofscores - lowestofscores;
-    double average = lowest/(NUMSCORES-1);
+        int lowestofscores = getLowest(scores, size);
+        int lowest = totalscore - lowestofscores;
+        double average = static_cast<double>(lowest)/(size-1);
 return average;
     
 
