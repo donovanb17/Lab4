@@ -19,16 +19,42 @@ void getScores(int scores[], int size){
     }
 }
 
+// This function should use a for loop to display all the scores stored in the array
 void printScores(const int scores[], int size){
+    for (int i = 0; i < size; i++){
+        cout << scores[i];
+
+    }
 
 
 }
 
 int getLowest(const int scores[], int size){
+    int lowest = scores[0]
+    for (int i = 0 + 1; i < size; i++){
+        if (scores[i] < lowest){
+            lowest = scores[i]
+        }
+
+    return lowest
+    }
 
 }
 
 double calculateAverage(const int scores[], int size){
+    int totalscore = scores[0];
+
+    for (int i = 0 + 1; i < size; i++){
+        
+        int sumofscores = totalscore + scores[i];
+        int totalscore = sumofscores;
+    return sumofscores;
+    }
+    int lowestofscores = getLowest(scores, NUMSCORES);
+    int lowest = sumofscores - lowestofscores;
+    double average = lowest/(NUMSCORES-1);
+return average;
+    
 
 
 }
